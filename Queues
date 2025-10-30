@@ -1,0 +1,30 @@
+#include <iostream>
+#include <queue>
+using namespace std;
+
+int main() {
+    queue<int> myQueue;  // Create a queue of integers
+
+    
+    myQueue.push(10);
+    myQueue.push(20);
+    myQueue.push(30);
+
+    cout << "Queue elements: ";
+    
+    while (!myQueue.empty()) {
+        cout << myQueue.front() << " ";
+        myQueue.pop();  // Remove the front element after printing
+    }
+    cout << endl;
+
+    
+    cout << "Is queue empty? " << (myQueue.empty() ? "Yes" : "No") << endl;
+
+    myQueue.push(40);  // Add a new element
+    cout << "Front element: " << myQueue.front() << endl;
+    cout << "Back element: " << myQueue.back() << endl;
+    cout << "Queue size: " << myQueue.size() << endl;
+
+    return 0;
+}
